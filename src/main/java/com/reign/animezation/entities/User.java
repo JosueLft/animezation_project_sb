@@ -11,15 +11,15 @@ import javax.persistence.Id;
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private String email;
-	private String phone;
+	private Long phone;
 	private String password;
-	
+
 	// DADOS NECESSARIOS PARA COMPLETAR PEDIDOS
 	private Long cpf;
 	private Long birthDate;
@@ -33,7 +33,8 @@ public class User implements Serializable {
 	
 	public User() {}
 	
-	public User(Long id, String name, String email, String phone, String password, Long cpf, Long birthDate, Long cep,
+
+	public User(Long id, String name, String email, Long phone, String password, Long cpf, Long birthDate, Long cep,
 			String addres, Integer number, String complement, String neighborhood, String city, String state) {
 		super();
 		this.id = id;
@@ -55,89 +56,117 @@ public class User implements Serializable {
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPhone() {
+
+	public Long getPhone() {
 		return phone;
 	}
-	public void setPhone(String phone) {
+
+	public void setPhone(Long phone) {
 		this.phone = phone;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
 
+	
+	
 	public Long getCpf() {
 		return cpf;
 	}
+
 	public void setCpf(Long cpf) {
 		this.cpf = cpf;
 	}
+
 	public Long getBirthDate() {
 		return birthDate;
 	}
+
 	public void setBirthDate(Long birthDate) {
 		this.birthDate = birthDate;
 	}
+
 	public Long getCep() {
 		return cep;
 	}
+
 	public void setCep(Long cep) {
 		this.cep = cep;
 	}
+
 	public String getAddres() {
 		return addres;
 	}
+
 	public void setAddres(String addres) {
 		this.addres = addres;
 	}
+
 	public Integer getNumber() {
 		return number;
 	}
+
 	public void setNumber(Integer number) {
 		this.number = number;
 	}
+
 	public String getComplement() {
 		return complement;
 	}
+
 	public void setComplement(String complement) {
 		this.complement = complement;
 	}
+
 	public String getNeighborhood() {
 		return neighborhood;
 	}
+
 	public void setNeighborhood(String neighborhood) {
 		this.neighborhood = neighborhood;
 	}
+
 	public String getCity() {
 		return city;
 	}
+
 	public void setCity(String city) {
 		this.city = city;
 	}
+
 	public String getState() {
 		return state;
 	}
+
 	public void setState(String state) {
 		this.state = state;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
