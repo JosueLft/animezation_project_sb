@@ -2,6 +2,7 @@ package com.reign.animezation.entities;
 
 import java.io.Serializable;
 
+<<<<<<< HEAD
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,11 +15,18 @@ public class User implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+=======
+public class User implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+>>>>>>> 9aee6a2... 		--- User e UserResource ---
 	private Long id;
 	private String name;
 	private String email;
 	private String phone;
 	private String password;
+<<<<<<< HEAD
 	private Long cpf;
 	private Long birthDate;
 	private Long cep;
@@ -33,12 +41,19 @@ public class User implements Serializable {
 	
 	public User(Long id, String name, String email, String phone, String password, Long cpf, Long birthDate, Long cep,
 			String addres, Integer number, String complement, String neighborhood, String city, String state) {
+=======
+	
+	public User() {}
+	
+	public User(Long id, String name, String email, String phone, String password) {
+>>>>>>> 9aee6a2... 		--- User e UserResource ---
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.phone = phone;
 		this.password = password;
+<<<<<<< HEAD
 		this.cpf = cpf;
 		this.birthDate = birthDate;
 		this.cep = cep;
@@ -50,6 +65,10 @@ public class User implements Serializable {
 		this.state = state;
 	}
 	
+=======
+	}
+
+>>>>>>> 9aee6a2... 		--- User e UserResource ---
 	public Long getId() {
 		return id;
 	}
@@ -80,6 +99,7 @@ public class User implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+<<<<<<< HEAD
 	public Long getCpf() {
 		return cpf;
 	}
@@ -134,6 +154,8 @@ public class User implements Serializable {
 	public void setState(String state) {
 		this.state = state;
 	}
+=======
+>>>>>>> 9aee6a2... 		--- User e UserResource ---
 
 	@Override
 	public int hashCode() {
