@@ -3,11 +3,15 @@ package com.reign.animezation.entities;
 import java.io.Serializable;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import javax.persistence.Entity;
+=======
+>>>>>>> dc306c8... 		--- Test profile, dependencias H2 ---
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+<<<<<<< HEAD
 @Entity
 public class User implements Serializable {
 	
@@ -21,6 +25,14 @@ public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 >>>>>>> 9aee6a2... 		--- User e UserResource ---
+=======
+public class User implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+>>>>>>> dc306c8... 		--- Test profile, dependencias H2 ---
 	private Long id;
 	private String name;
 	private String email;

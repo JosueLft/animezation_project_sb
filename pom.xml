@@ -30,7 +30,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> dc306c8... 		--- Test profile, dependencias H2 ---
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -40,6 +44,10 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+<<<<<<< HEAD
+=======
+		
+>>>>>>> dc306c8... 		--- Test profile, dependencias H2 ---
 	</dependencies>
 
 	<build>
