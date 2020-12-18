@@ -2,35 +2,48 @@ package com.reign.animezation.entities;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
 public class User implements Serializable {
-
+	
 	private static final long serialVersionUID = 1L;
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private String email;
 	private String phone;
 	private String password;
-	
-	public User() {}
 
-	public User(Long id, String name, String email, String phone, String password) {
+	// DADOS NECESSARIOS PARA COMPLETAR PEDIDOS
+	private Long cpf;
+	private Long birthDate;
+	private Long cep;
+	private String addres;
+	private Integer number;
+	private String complement;
+	private String neighborhood;
+	private String city;
+	private String state;
+
+	public User() {}
+	
+	public User(Long id, String name, String email, String phone, String password, Long cpf, Long birthDate, Long cep,
+			String addres, Integer number, String complement, String neighborhood, String city, String state) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.phone = phone;
 		this.password = password;
+		this.cpf = cpf;
+		this.birthDate = birthDate;
+		this.cep = cep;
+		this.addres = addres;
+		this.number = number;
+		this.complement = complement;
+		this.neighborhood = neighborhood;
+		this.city = city;
+		this.state = state;
 	}
-
+	
 	public Long getId() {
 		return id;
 	}
@@ -61,6 +74,60 @@ public class User implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public Long getCpf() {
+		return cpf;
+	}
+	public void setCpf(Long cpf) {
+		this.cpf = cpf;
+	}
+	public Long getBirthDate() {
+		return birthDate;
+	}
+	public void setBirthDate(Long birthDate) {
+		this.birthDate = birthDate;
+	}
+	public Long getCep() {
+		return cep;
+	}
+	public void setCep(Long cep) {
+		this.cep = cep;
+	}
+	public String getAddres() {
+		return addres;
+	}
+	public void setAddres(String addres) {
+		this.addres = addres;
+	}
+	public Integer getNumber() {
+		return number;
+	}
+	public void setNumber(Integer number) {
+		this.number = number;
+	}
+	public String getComplement() {
+		return complement;
+	}
+	public void setComplement(String complement) {
+		this.complement = complement;
+	}
+	public String getNeighborhood() {
+		return neighborhood;
+	}
+	public void setNeighborhood(String neighborhood) {
+		this.neighborhood = neighborhood;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
 
 	@Override
 	public int hashCode() {
@@ -86,7 +153,4 @@ public class User implements Serializable {
 			return false;
 		return true;
 	}
-
-	
-	
 }
