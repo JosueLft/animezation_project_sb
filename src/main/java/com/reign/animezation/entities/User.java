@@ -19,8 +19,6 @@ public class User implements Serializable {
 	private String email;
 	private String phone;
 	private String password;
-
-	// DADOS NECESSARIOS PARA COMPLETAR PEDIDOS
 	private Long cpf;
 	private Long birthDate;
 	private Long cep;
