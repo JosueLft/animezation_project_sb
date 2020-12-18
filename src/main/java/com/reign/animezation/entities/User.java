@@ -4,13 +4,18 @@ import java.io.Serializable;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import javax.persistence.Entity;
 =======
 >>>>>>> dc306c8... 		--- Test profile, dependencias H2 ---
+=======
+import javax.persistence.Entity;
+>>>>>>> 1a9c38e... 		--- JPA repository, Dependency injection, database seeding ---
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 @Entity
 public class User implements Serializable {
@@ -26,6 +31,9 @@ public class User implements Serializable {
 
 >>>>>>> 9aee6a2... 		--- User e UserResource ---
 =======
+=======
+@Entity
+>>>>>>> 1a9c38e... 		--- JPA repository, Dependency injection, database seeding ---
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -68,6 +76,7 @@ public class User implements Serializable {
 	
 	public User() {}
 	
+<<<<<<< HEAD
 	public User(Long id, String name, String email, String phone, String password) {
 >>>>>>> 9aee6a2... 		--- User e UserResource ---
 		super();
@@ -91,6 +100,8 @@ public class User implements Serializable {
 =======
 	}
 	
+=======
+>>>>>>> 1a9c38e... 		--- JPA repository, Dependency injection, database seeding ---
 	public User(Long id, String name, String email, String phone, String password, Long cpf, Long birthDate, Long cep,
 			String addres, Integer number, String complement, String neighborhood, String city, String state) {
 		super();
