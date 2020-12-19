@@ -11,35 +11,17 @@ import com.reign.animezation.entities.User;
 import com.reign.animezation.repositories.UserRepository;
 
 @Configuration
-<<<<<<< HEAD
-@Profile("test")
-=======
 @Profile("test") // indicando que a configuração só será executada caso seja o profile test que esteja invocando
->>>>>>> 1a9c38e... 		--- JPA repository, Dependency injection, database seeding ---
 public class TestConfig implements CommandLineRunner {
 
 	@Autowired
 	private UserRepository userRepository;
 
-<<<<<<< HEAD
 	@Override
 	public void run(String... args) throws Exception {
-		
-		User u1 = new User(null, "Pablo Rodrigues", "pablorodrigo1996@hotmail.com", "11970707070", "Gajuel123", null, null, null, null, null, null, null, null, null);
-		User u2 = new User(null, "Gabriel Tomaz", "gazinhogodi@outlook.com", "11960606060", "Gabriel39234500gazinho", null, null, null, null, null, null, null, null, null);
-
-		userRepository.saveAll(Arrays.asList(u1, u2));
-		
-	}
-
-=======
-	
-	@Override
-	public void run(String... args) throws Exception {
-		User u1 = new User(null, "Pablo Rodrigues", "pablorodrigo1996@hotmail.com", "11970707070", "Gajuel123", null, null, null, null, null, null, null, null, null);
-		User u2 = new User(null, "Gabriel Tomaz", "gazinhogodi@outlook.com", "11960606060", "Gabriel39234500gazinho", null, null, null, null, null, null, null, null, null);
+		User u1 = new User(null, "Pablo Rodrigues", "pablorodrigo1996@hotmail.com", 11970707070L, "Gajuel123", null, null, null, null, null, null, null, null, null);
+		User u2 = new User(null, "Gabriel Tomaz", "gazinhogodi@outlook.com", 11960606060L, "Gabriel39234500gazinho", null, null, null, null, null, null, null, null, null);
 		
 		userRepository.saveAll(Arrays.asList(u1, u2));
 	}
->>>>>>> 1a9c38e... 		--- JPA repository, Dependency injection, database seeding ---
 }
