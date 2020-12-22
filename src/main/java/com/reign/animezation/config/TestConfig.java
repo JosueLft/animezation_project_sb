@@ -46,8 +46,15 @@ public class TestConfig implements CommandLineRunner {
 		Product p4 = new Product(null, "That Time I Got Reincarnated As A Slime! Vol. 01", "Depois de reencarnar como uma Slime em um mundo fantástico regido pela magia e repleto de seres míticos, Satoru se alia a Veldora, o lendário Dragão da Tempestade que estava selado em uma caverna.\\r\\n\\r\\nAgora rebatizado de Rimuru.", 27.90, "");
 		Product p5 = new Product(null, "Kenpachi Zaraki Bankai", "Camiseta para os Fãs de bleach com imagem de alta qualidade da bankai de Kenpachi Zaraki!.", 10000.99, ""); 
 
-		
 		categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
+		productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
+		
+		p1.getCategories().add(cat1);
+		p2.getCategories().add(cat2);
+		p3.getCategories().add(cat3);
+		p4.getCategories().add(cat1);
+		p5.getCategories().add(cat2);
+		
 		productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
 		
 		User u1 = new User(null, "Pablo Rodrigues", "pablorodrigo1996@hotmail.com", 11970707070L, "Gajuel123", null, null, null, null, null, null, null, null, null);
