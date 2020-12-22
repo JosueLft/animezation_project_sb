@@ -1,13 +1,20 @@
 package com.reign.animezation.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
+@Table(name = "tb_user")
 public class User implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
@@ -30,6 +37,11 @@ public class User implements Serializable {
 	private String city;
 	private String state;
 
+	// ASSOCIAÇÕES
+	@JsonIgnore
+	@OneToMany(mappedBy = "client")
+	private List<Order> orders = new ArrayList<>();
+	
 	public User() {}
 
 	public User(Long id, String name, String email, Long phone, String password, Long cpf, Long birthDate, Long cep,
@@ -134,6 +146,9 @@ public class User implements Serializable {
 	}
 	public void setState(String state) {
 		this.state = state;
+	}
+	public List<Order> getOrders() {
+		return orders;
 	}
 
 	@Override
