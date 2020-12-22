@@ -8,9 +8,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
+import com.reign.animezation.entities.Category;
 import com.reign.animezation.entities.Order;
 import com.reign.animezation.entities.User;
 import com.reign.animezation.entities.enums.OrderStatus;
+import com.reign.animezation.repositories.CategoryRepository;
 import com.reign.animezation.repositories.OrderRepository;
 import com.reign.animezation.repositories.UserRepository;
 
@@ -23,9 +25,18 @@ public class TestConfig implements CommandLineRunner {
 	
 	@Autowired
 	private OrderRepository orderRepository;
+	
+	@Autowired
+	private CategoryRepository categoryRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
+		Category cat1 = new Category(null, "Livros");
+		Category cat2 = new Category(null, "Camisetas");
+		Category cat3 = new Category(null, "Acessórios"); 
+		
+		categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
+		
 		User u1 = new User(null, "Pablo Rodrigues", "pablorodrigo1996@hotmail.com", 11970707070L, "Gajuel123", null, null, null, null, null, null, null, null, null);
 		User u2 = new User(null, "Gabriel Tomaz", "gazinhogodi@outlook.com", 11960606060L, "Gabriel39234500gazinho", null, null, null, null, null, null, null, null, null);
 		
