@@ -31,4 +31,25 @@ public class UserService {
 	public void delete(Long id) {
 		repository.deleteById(id);
 	}
+	
+	public User update(Long id, User obj) {
+		User entity = repository.getOne(id); // PREPARA OBJETO MONITORADO
+		updateData(entity, obj);
+		return repository.save(entity);
+	}
+
+	private void updateData(User entity, User obj) {
+		entity.setName(obj.getName());
+		entity.setEmail(obj.getEmail());
+		entity.setPhone(obj.getPhone());
+		entity.setCpf(obj.getCpf());
+		entity.setBirthDate(obj.getBirthDate());
+		entity.setCep(obj.getCep());
+		entity.setAddres(obj.getAddres());
+		entity.setNumber(obj.getNumber());
+		entity.setComplement(obj.getComplement());
+		entity.setNeighborhood(obj.getNeighborhood());
+		entity.setCity(obj.getCity());
+		entity.setState(obj.getState());
+	}
 }
