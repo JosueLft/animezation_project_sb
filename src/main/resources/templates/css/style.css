@@ -1,53 +1,30 @@
-a {
-    text-decoration: none;
-    color: #FFF;
+h1 {
+    text-align: center;
+    margin: 5px;
 }
 
 header {
-    width: 100%;
-    height: auto;
-    opacity: 0.8;
-    /*border: solid 1px #666*/
-}
-
-header .container {
-    color: #fff;
-    background-color: #666;
-    padding-top: 25px;
-}
-
-header .menu {
-    margin-bottom: 5px;
-    height: 75px;
-}
-header .menu ul {
-    text-align: right;
-    padding-right: 9%;
-}
-header .menu ul li{
-    display: inline;
-    padding-left: 25px;
-    font-size: 18px;
-}
-
-header .logotipo {
-    margin-top: -5.8%;
-    margin-left: 8%;
-    position: relative;
-}
-
-header .logo {
-    padding-top: 5px;
-    max-width: auto;
-    max-height: 70px;
+    max-width: 100%;
     width: auto;
     height: auto;
-    border-radius: 45px;
+    margin-bottom: 1%;
+    opacity: 0.8;
 }
 
-header .menu .active a {
-    background-color: #000;
+.logo {
+    width: auto;
+    max-width: max-content;
+}
+
+.logo-painel {
     border-radius: 25px;
-    padding: 15px;
-    color: #FF0000;
+    background-color: #F7F7F7;
+    margin-bottom: 15px;
+}
+
+.painel-instagram {
+    border: solid 1px #FD0000;
+    border-radius: 15px;
+    height: 500px;
+    margin-bottom: 15px;
 }

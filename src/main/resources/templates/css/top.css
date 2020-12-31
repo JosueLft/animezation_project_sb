@@ -1,0 +1,47 @@
+/* Navbar items */
+.navbar-brand {
+    padding-left: 10px;
+}
+
+a, .dropdown-item {
+    color: #fff;
+}
+
+.active a, .dropdown-item.active {
+    color: #fd0000;
+    border: solid 1px #f20000;
+    border-radius: 0 25px;
+    text-align: center;
+}
+
+.dropdown-item.active {
+    background-color: #212529;
+}
+
+.menu-top {
+    float: right;
+}
+
+/* Toggler configs */
+.navbar-toggler {
+    color: #F20000;
+    border-color: #F20000;
+    margin-bottom: 10px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewbox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(242, 0, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+/* fim toggler */
+
+/* Hover area */
+a:hover {
+    color: #f20000;
+}
+
+.dropdown-item:hover {
+    color: #f20000;
+    background-color: #212529;
+}
+/* fim hover */
+/* Fim Navbar items */
