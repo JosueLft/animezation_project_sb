@@ -3,7 +3,7 @@
     padding-left: 10px;
 }
 
-a, .dropdown-item {
+.sticky-top a, .sticky-top .dropdown-item {
     color: #fff;
 }
 
@@ -16,10 +16,6 @@ a, .dropdown-item {
 
 .dropdown-item.active {
     background-color: #212529;
-}
-
-.menu-top {
-    float: right;
 }
 
 /* Toggler configs */

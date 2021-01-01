@@ -10,21 +10,3 @@ header {
     margin-bottom: 1%;
     opacity: 0.8;
 }
-
-.logo {
-    width: auto;
-    max-width: max-content;
-}
-
-.logo-painel {
-    border-radius: 25px;
-    background-color: #F7F7F7;
-    margin-bottom: 15px;
-}
-
-.painel-instagram {
-    border: solid 1px #FD0000;
-    border-radius: 15px;
-    height: 500px;
-    margin-bottom: 15px;
-}

@@ -1,0 +1,10 @@
+.logo {
+    width: auto;
+    max-width: max-content;
+}
+
+.logo-painel {
+    border-radius: 15px;
+    background-color: #F7F7F7;
+    margin-bottom: 15px;
+}

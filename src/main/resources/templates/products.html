@@ -10,7 +10,9 @@
 
         <!-- My CSS -->
         <link href="css/style.css" rel="stylesheet">
-        <link href="css/top.css" rel="stylesheet">
+        <link href="css/header.css" rel="stylesheet">
+        <link href="css/painel-logo.css" rel="stylesheet">
+        <link href="css/body.css" rel="stylesheet">
 
         <title>Animezation</title>
     </head>
@@ -25,15 +27,15 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="conteudoNavbarSuportado">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="index.html">Home</a>
                             </li>
-                            <li class="nav-item dropdown hover">
+                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="products.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Produtos
                                 </a>
                                 <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="products.html">Mangás</a>
+                                    <a class="dropdown-item active" href="products.html">Mangás</a>
                                     <a class="dropdown-item" href="products.html">Light Novels/Livros</a>
                                     <div class="dropdown-divider bg-danger"></div>
                                     <a class="dropdown-item" href="test.html">Teste</a>
@@ -48,13 +50,86 @@
             </nav>
         </header>
 
-        <div class="container">
-            <div class="logo-painel">
-                <div class="logo container">
-                    <img src="img/logo.png" alt="Logotipo">
+        <div class="logo-painel container">
+            <div class="logo container">
+                <img src="img/logo.png" alt="Logotipo">
+            </div>
+        </div> <!-- fim painel do logo -->
+
+        <div class="body container">
+            <!-- inicio menu de produtos -->
+            <div class="tipos">
+                <nav class="products-navbar navbar navbar-expand-lg">
+                    <a class="navbar-brand" id="title"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Mangás</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Light Novels / Livros</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>    
+            </div>
+            <!-- fim menu de produtos -->
+
+            <!-- menu lateral de categoria de produtos -->
+            <div class="filters">
+                <nav>
+
+                </nav>
+            </div>
+            <!-- fim menu lateral -->
+
+            <!-- Painel de produtos -->
+            <div class="products-table">
+                <div class="product-1">
+                    <div class="min-img">
+                        <img class="min-img" src="https://firebasestorage.googleapis.com/v0/b/animezation-65cce.appspot.com/o/capas%2Fmangas%2FTensei%20Shitara%20Slime%20Datta%20Ken%2FTensei%20Shitara%20Slime%20Datta%20Ken%20Vol1.png?alt=media&token=e1ca4f72-4886-42b4-ba12-1050363fc1ac" alt="Capa volume 1">
+                        <div class="product-description"><!-- descrição -->
+                            <h5 class="work-title">Tensei Shitara Slime Datta Ken Vol.1</h5> 
+                            <p class="price">R$ 29,50</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-1">
+                    <div class="min-img">
+                        <img class="min-img" src="https://firebasestorage.googleapis.com/v0/b/animezation-65cce.appspot.com/o/capas%2Fmangas%2FTensei%20Shitara%20Slime%20Datta%20Ken%2FTensei%20Shitara%20Slime%20Datta%20Ken%20Vol2.png?alt=media&token=9d540613-b5b0-4405-a4da-126ea1457196" alt="Capa volume 2">
+                        <div class="product-description"><!-- descrição -->
+                            <h5 class="work-title">Tensei Shitara Slime Datta Ken Vol.2</h5> 
+                            <p class="price">R$ 29,50</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-1">
+                    <div class="min-img">
+                        <img class="min-img" src="https://firebasestorage.googleapis.com/v0/b/animezation-65cce.appspot.com/o/capas%2Fmangas%2FTensei%20Shitara%20Slime%20Datta%20Ken%2FTensei%20Shitara%20Slime%20Datta%20Ken%20Vol1.png?alt=media&token=e1ca4f72-4886-42b4-ba12-1050363fc1ac" alt="Capa volume 1">
+                        <div class="product-description"><!-- descrição -->
+                            <h5 class="work-title">Tensei Shitara Slime Datta Ken Vol.1</h5> 
+                            <p class="price">R$ 29,50</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-1">
+                    <div class="min-img">
+                        <img class="min-img" src="https://firebasestorage.googleapis.com/v0/b/animezation-65cce.appspot.com/o/capas%2Fmangas%2FTensei%20Shitara%20Slime%20Datta%20Ken%2FTensei%20Shitara%20Slime%20Datta%20Ken%20Vol2.png?alt=media&token=9d540613-b5b0-4405-a4da-126ea1457196" alt="Capa volume 2">
+                        <div class="product-description"><!-- descrição -->
+                            <h5 class="work-title">Tensei Shitara Slime Datta Ken Vol.2</h5> 
+                            <p class="price">R$ 29,50</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+            <!-- Fim Painel de Produtos -->
+        </div><!-- fim do container de conteudos -->
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
