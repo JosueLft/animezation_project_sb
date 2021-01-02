@@ -1,0 +1,35 @@
+.login .email .form-control, .login .pass .form-control {
+    height: auto;
+}
+
+.title-login {
+    max-width: min-content;
+    border-radius: 25px;
+    border-bottom: solid 2px #F20000;
+}
+
+.login-panel {
+    border-radius: 25px;
+}
+
+.login {
+    border-left: solid 5px #F20000;
+    border-radius: 15px;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 15px;
+    float: left;
+    position: relative;
+    margin-left: 20%;
+    text-align: center;
+}
+
+.register {
+    border-left: solid 5px #F20000;
+    border-radius: 15px;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 15px;
+    float: right;
+    position: relative;
+    text-align: center;
+    margin-right: 18%;
+}
