@@ -15,6 +15,7 @@ import com.reign.animezation.entities.Payment;
 import com.reign.animezation.entities.Product;
 import com.reign.animezation.entities.User;
 import com.reign.animezation.entities.enums.OrderStatus;
+import com.reign.animezation.entities.products.Manga;
 import com.reign.animezation.repositories.CategoryRepository;
 import com.reign.animezation.repositories.OrderItemRepository;
 import com.reign.animezation.repositories.OrderRepository;
@@ -44,21 +45,24 @@ public class TestConfig implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		Category cat1 = new Category(null, "Livros");
 		Category cat2 = new Category(null, "Camisetas");
-		Category cat3 = new Category(null, "Acessórios"); 
+		Category cat3 = new Category(null, "Acessórios");
+		Category cat4 = new Category(null, "Mangas");
 		
-		Product p1 = new Product(null, "That Time I Got Reincarnated As A Slime! Vol. 01", "Satoru Mikani era um jovem trabalhador tímido e sem sorte no amor. Certo dia acaba sendo morto. Porém, para a sua surpresa, ele ressuscita como uma Slime em um mundo medieval repleto de magia, poderes sobre-humanos e seres fantásticos", 27.90, "");
+		Product p1 = new Manga(null, "That Time I Got Reincarnated As A Slime!", "Slime", 29.50, "https://firebasestorage.googleapis.com/v0/b/animezation-65cce.appspot.com/o/capas%2Fmangas%2FTensei%20Shitara%20Slime%20Datta%20Ken%2FTensei%20Shitara%20Slime%20Datta%20Ken%20Vol1.png?alt=media&token=e1ca4f72-4886-42b4-ba12-1050363fc1ac", "Taiki Wakawami (Ilustrador), Fuse (Roteirista) e Mitz Vah (Designer de personagens)", 232, 01, "14 anos", "JBC Editora", 9786555940060L);
 		Product p2 = new Product(null, "Rukia Bankai & Ichigo Mugetsu", "Camiseta para os Fãs de bleach, com imagem de alta qualidade da bankai de rukia e ichigo em sua forma de getsuga final!.", 2190.0, "");
 		Product p3 = new Product(null, "Almofada Anime Fullmetal Alchemist", "As nossas almofadas de anime são produzidas com tecido 100% helanca, para garantir uma estampa com cores vivas, conforto e qualidade prolongadas", 1250.0, "");
-		Product p4 = new Product(null, "That Time I Got Reincarnated As A Slime! Vol. 01", "Depois de reencarnar como uma Slime em um mundo fantástico regido pela magia e repleto de seres míticos, Satoru se alia a Veldora, o lendário Dragão da Tempestade que estava selado em uma caverna.\\r\\n\\r\\nAgora rebatizado de Rimuru.", 27.90, "");
+		Product p4 = new Manga(null, "That Time I Got Reincarnated As A Slime!", "Slime", 29.50, "https://firebasestorage.googleapis.com/v0/b/animezation-65cce.appspot.com/o/capas%2Fmangas%2FTensei%20Shitara%20Slime%20Datta%20Ken%2FTensei%20Shitara%20Slime%20Datta%20Ken%20Vol1.png?alt=media&token=e1ca4f72-4886-42b4-ba12-1050363fc1ac", "Taiki Wakawami (Ilustrador), Fuse (Roteirista) e Mitz Vah (Designer de personagens)", 232, 02, "14 anos", "JBC Editora", 9786555940060L);
 		Product p5 = new Product(null, "Kenpachi Zaraki Bankai", "Camiseta para os Fãs de bleach com imagem de alta qualidade da bankai de Kenpachi Zaraki!.", 10000.99, ""); 
 
-		categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
+		categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3, cat4));
 		productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
 		
 		p1.getCategories().add(cat1);
+		p1.getCategories().add(cat4);
 		p2.getCategories().add(cat2);
 		p3.getCategories().add(cat3);
 		p4.getCategories().add(cat1);
+		p4.getCategories().add(cat4);
 		p5.getCategories().add(cat2);
 		
 		productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
