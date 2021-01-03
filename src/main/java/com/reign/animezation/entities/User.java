@@ -27,6 +27,7 @@ public class User implements Serializable {
 	private Long phone;
 	private String password;
 
+	private Integer rank;
 	private Long cpf;
 	private Long birthDate;
 	private Long cep;
@@ -44,9 +45,10 @@ public class User implements Serializable {
 	
 	public User() {}
 
-	public User(Long id, String name, String email, Long phone, String password, Long cpf, Long birthDate, Long cep,
+	public User(Long id, Integer rank, String name, String email, Long phone, String password, Long cpf, Long birthDate, Long cep,
 			String addres, Integer number, String complement, String neighborhood, String city, String state) {
 		super();
+		this.rank = rank;
 		this.id = id;
 		this.name = name;
 		this.email = email;
@@ -65,6 +67,12 @@ public class User implements Serializable {
 
 	public Long getId() {
 		return id;
+	}
+	public Integer getRank() {
+		return rank;
+	}
+	public void setRank(Integer rank) {
+		this.rank = rank;
 	}
 	public void setId(Long id) {
 		this.id = id;
