@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,9 +27,13 @@ public class Product  implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@Column(length = 255, nullable = false)
 	private String name;
+	@Column(length = 1000, nullable = false)
 	private String description;
+	@Column(length = 5, nullable = false)
 	private Double price;
+	@Column(length = 1000, nullable = false)
 	private String imgUrl;
 	
 	// ASSOCIAÇÃO

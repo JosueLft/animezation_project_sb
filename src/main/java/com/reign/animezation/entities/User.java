@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,13 +23,16 @@ public class User implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@Column(length = 100, nullable = false)
 	private String name;
+	@Column(length = 100, nullable = false)
 	private String email;
-	private Long phone;
+	@Column(length = 30, nullable = false)
 	private String password;
 
-	private Integer rank;
 	private Long cpf;
+	private Long phone;
+	private Integer rank;
 	private Long birthDate;
 	private Long cep;
 	private String addres;
@@ -45,16 +49,16 @@ public class User implements Serializable {
 	
 	public User() {}
 
-	public User(Long id, Integer rank, String name, String email, Long phone, String password, Long cpf, Long birthDate, Long cep,
+	public User(Long id, Long cpf, Integer rank, String name, String email, Long phone, String password, Long birthDate, Long cep,
 			String addres, Integer number, String complement, String neighborhood, String city, String state) {
 		super();
-		this.rank = rank;
 		this.id = id;
+		this.cpf = cpf;
+		this.rank = rank;
 		this.name = name;
 		this.email = email;
 		this.phone = phone;
 		this.password = password;
-		this.cpf = cpf;
 		this.birthDate = birthDate;
 		this.cep = cep;
 		this.addres = addres;
