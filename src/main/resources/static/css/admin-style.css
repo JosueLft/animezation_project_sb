@@ -1,0 +1,27 @@
+header {
+    padding-left: 15px;
+    margin: 0;
+    opacity: 1;
+}
+
+a {
+    color: #FFF;
+}
+
+a:hover {
+    color:#F20000;
+}
+
+.panel {
+    height: auto;
+    border: solid 1px #000;
+}
+.side-panel {
+    padding: 5px;
+    border: solid 1px #F20000;
+    background-color: #212529;
+    max-width: 20%;
+    min-width: 15%;
+    width: 30%;
+    height: auto;
+}
